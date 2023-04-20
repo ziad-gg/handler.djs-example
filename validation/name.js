@@ -1,8 +1,8 @@
 const { Validation } = require('handler.djs');
 
 module.exports = new Validation()
-.setCommnads(["all"]) 
+.setCommnads(["ping", "profile"]) 
 .setExecution( (message, next) => {
-   if (message.content.includes("password")) return next() 
-   else message.reply({content: "stoped"});
+    return next() 
+   // else message.reply({content: "stoped"});
 })

@@ -23,18 +23,12 @@ client.app.setCooldown({
     reference: true, 
     long: true, 
     Mdelete: "3s"
-});
+})
 
-
-client.on(Events.ClientReady, () => {
-    client.app.build();
-    client.app.setData({
-        name: "ziad",
-        age: 10,
-        money: "1000$"
-    })
+client.on(Events.ClientReady, async () => {
+    await client.app.build();
     console.log(`${client.user.tag} is Ready in ${client.guilds.cache.size} Guilds`);
 });
 
 
-client.login(YourToken)
+client.login("MTA0MTEzODI0MDAyMDgwNzY4MQ.GJTDCK.ivogJA0H4W_mqdAm5EzDXhhXiH0tRTeKqX-n6U")

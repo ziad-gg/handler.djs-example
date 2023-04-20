@@ -1,9 +1,8 @@
-const { Command } = require('handler.djs');
+const { CommandBuilder } = require('handler.djs');
 
-module.exports = new Command()
+module.exports = new CommandBuilder()
 .setName("profile")
 .setDescription("See user Profile")
-.setCategory("auto")
 .setCooldown("10s")
 .setExecution(async function() {
 
