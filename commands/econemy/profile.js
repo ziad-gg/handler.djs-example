@@ -4,6 +4,7 @@ module.exports = new CommandBuilder()
 .setName("profile")
 .setDescription("See user Profile")
 .setCooldown("10s")
+.setCategory("econemy")
 .setExecution(async function() {
 
     const { message, client, args } = this;

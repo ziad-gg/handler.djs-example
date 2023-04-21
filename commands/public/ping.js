@@ -4,6 +4,7 @@ module.exports = new CommandBuilder()
 .setName("ping")
 .setAttr("name", "hello")
 .setDescription("Test bot response Time")
+.setCategory("public")
 .setExecution(Execute);
 
 /**
@@ -11,8 +12,9 @@ module.exports = new CommandBuilder()
 */
 
 async function Execute(message) {
-  console.log(message.command)
-  message.command.getAttr()
-  console.log(message.command.getAttr("name"))
+  // message.getAttr();
+  // message.getData();
+  message.getData()
+  console.log(message.getData("name"))
   message.reply({content: "pong"});
 };

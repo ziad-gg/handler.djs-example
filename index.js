@@ -12,7 +12,7 @@ const client = new Client({ intents: [
 client.app = new Application({
     client: client,
     commandsPath: path.join(__dirname, "./commands"),
-    validationPath: path.join(__dirname, "./validation"),
+    EventsPath: path.join(__dirname, "./events"),
     owners: ["ownerId"],
 });
   
@@ -25,10 +25,14 @@ client.app.setCooldown({
     Mdelete: "3s"
 })
 
+client.app.setData({
+    name: "hello"
+})
+
 client.on(Events.ClientReady, async () => {
     await client.app.build();
     console.log(`${client.user.tag} is Ready in ${client.guilds.cache.size} Guilds`);
 });
 
 
-client.login("MTA0MTEzODI0MDAyMDgwNzY4MQ.GJTDCK.ivogJA0H4W_mqdAm5EzDXhhXiH0tRTeKqX-n6U")
+client.login("")
