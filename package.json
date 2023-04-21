@@ -11,6 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "discord.js": "^14.9.0",
-    "handler.djs": "^1.4.5"
+    "handler.djs": "^1.5.2",
+    "mkdirp": "^1.0.4",
+    "sqlite3": "^5.0.2"
   }
 }

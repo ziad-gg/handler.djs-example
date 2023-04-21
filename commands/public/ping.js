@@ -13,6 +13,7 @@ module.exports = new CommandBuilder()
 
 async function Execute(message) {
   // message.getAttr();
+
   // message.getData();
   message.getData()
   console.log(message.getData("name"))
